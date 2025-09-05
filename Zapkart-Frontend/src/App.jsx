@@ -34,7 +34,7 @@ export default function App() {
   return (
     <>
       <ToastContainer />
-      <BrowserRouter basename="/zapkart-frontend">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/customer" element={<CustomerDashboard />} />
