@@ -22,7 +22,7 @@ export default function UpdateProduct() {
     const productUpdate = {};
     productUpdate[updateProductData.field] = updateProductData.value;
   
-    axios.put(`http://localhost:8080/api/products/${updateProductData.id}`, productUpdate, {
+    axios.put(`http://localhost:2030/zapkart-backend/api/products/${updateProductData.id}`, productUpdate, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {

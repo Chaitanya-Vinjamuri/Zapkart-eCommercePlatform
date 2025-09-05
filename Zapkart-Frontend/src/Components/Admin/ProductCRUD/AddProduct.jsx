@@ -41,7 +41,7 @@ const AddProduct = () => {
 
     const token = JSON.parse(localStorage.getItem('token'));
 
-    axios.post('http://localhost:8080/api/products/saveData', payload, {
+    axios.post('http://localhost:2030/zapkart-backend/api/products/saveData', payload, {
       headers: {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${token}`

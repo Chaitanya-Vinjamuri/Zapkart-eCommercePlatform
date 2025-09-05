@@ -22,7 +22,7 @@ export default function UpdateUser() {
     const userUpdate = {};
     userUpdate[updateUserData.field] = updateUserData.value;
 
-    axios.put(`http://localhost:8080/api/users/${updateUserData.id}`, userUpdate, {
+    axios.put(`http://localhost:2030/zapkart-backend/api/users/${updateUserData.id}`, userUpdate, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {

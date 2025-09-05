@@ -19,7 +19,7 @@ export default function DeleteUser() {
     const token = JSON.parse(localStorage.getItem('token'));
 
     axios
-      .delete(`http://localhost:8080/api/users/${uid}`, {
+      .delete(`http://localhost:2030/zapkart-backend/api/users/${uid}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

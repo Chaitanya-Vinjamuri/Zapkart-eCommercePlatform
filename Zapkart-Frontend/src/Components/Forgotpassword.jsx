@@ -23,7 +23,7 @@ export default function ForgotPassword() {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/users/forgot-password?email=${encodeURIComponent(email)}`,
+        `http://localhost:2030/zapkart-backend/api/users/forgot-password?email=${encodeURIComponent(email)}`,
         {}
       );
 

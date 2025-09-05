@@ -39,7 +39,7 @@ export default function AddUser() {
     
 
     axios
-      .post('http://localhost:8080/api/users/register', payload, {
+      .post('http://localhost:2030/zapkart-backend/api/users/register', payload, {
         headers: {
           'Content-Type': 'multipart/form-data'       
         },

@@ -73,7 +73,7 @@ const ProductsHome = () => {
         ];
 
         const fetchPromises = categories.map(category =>
-          axios.get(`http://localhost:8080/api/products/${category.name}`, {
+          axios.get(`http://localhost:2030/zapkart-backend/api/products/${category.name}`, {
             headers: { Authorization: `Bearer ${token}` }
           })
             .then(res => category.setter(res.data))
@@ -184,7 +184,7 @@ const ProductsHome = () => {
           {/* Image Container */}
           <div className="relative group h-44 overflow-hidden">
             <img
-              src={`http://localhost:8080/images/${product.profileImage}`}
+              src={`http://localhost:2030/zapkart-backend/images/${product.profileImage}`}
               alt={product.title || `${product.brand} ${product.model}`}
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
               onError={(e) => {

@@ -10,7 +10,7 @@ const ProductGallery = () => {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem('token'));
     
-    axios.get('http://localhost:8080/api/products', {
+    axios.get('http://localhost:2030/zapkart-backend/api/products', {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -34,7 +34,7 @@ const ProductGallery = () => {
             <Card onClick={() => handleShow(product)} style={{ cursor: 'pointer' }}>
               <Card.Img
                 variant="top"
-                src={`http://localhost:8080/images/${product.profileImage}`}
+                src={`http://localhost:2030/zapkart-backend/images/${product.profileImage}`}
                 height="200"
                 style={{ objectFit: 'cover' }}
               />
@@ -50,7 +50,7 @@ const ProductGallery = () => {
         </Modal.Header>
         <Modal.Body>
           <img
-            src={`http://localhost:8080/images/${selected?.profileImage}`}
+            src={`http://localhost:2030/zapkart-backend/images/${selected?.profileImage}`}
             alt={selected?.name}
             className="img-fluid mb-3"
           />

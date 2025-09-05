@@ -14,7 +14,7 @@ export default async function initiateRazorpayPayment({ totalAmount, token, cust
       try {
         // 1. Create order on backend
         const { data: order } = await axios.post(
-          `http://localhost:8080/api/payments/create-order?amount=${totalAmount}&currency=INR`,
+          `http://localhost:2030/zapkart-backend/api/payments/create-order?amount=${totalAmount}&currency=INR`,
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -29,7 +29,7 @@ export default async function initiateRazorpayPayment({ totalAmount, token, cust
           handler: async function (response) {
             try {
               // 2. Record payment details
-              await axios.post('http://localhost:8080/api/payments/add', {
+              await axios.post('http://localhost:2030/zapkart-backend/api/payments/add', {
                 razorpayOrderId: response.razorpay_order_id,
                 razorpayPaymentId: response.razorpay_payment_id,
                 razorpaySignature: response.razorpay_signature,

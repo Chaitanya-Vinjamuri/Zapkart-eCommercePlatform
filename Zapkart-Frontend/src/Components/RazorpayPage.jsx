@@ -15,7 +15,7 @@ function RazorpayPage() {
   useEffect(() => {
     const fetchAddresses = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/address/user/${customerId}`, {
+        const response = await axios.get(`http://localhost:2030/zapkart-backend/address/user/${customerId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const formatted = response.data.map(addr => ({
@@ -61,7 +61,7 @@ function RazorpayPage() {
       }));
 
       // 3. Save orders to backend
-      const response = await axios.post('http://localhost:8080/api/orders/add-multiple', orderPayload, {
+      const response = await axios.post('http://localhost:2030/zapkart-backend/api/orders/add-multiple', orderPayload, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'

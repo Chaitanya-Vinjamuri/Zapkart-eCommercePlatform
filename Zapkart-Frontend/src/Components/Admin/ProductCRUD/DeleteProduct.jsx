@@ -19,7 +19,7 @@ export default function DeleteProduct() {
     const token = JSON.parse(localStorage.getItem('token'));
 
     axios
-      .delete(`http://localhost:8080/api/products/${pid}`, {
+      .delete(`http://localhost:2030/zapkart-backend/api/products/${pid}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

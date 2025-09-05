@@ -116,7 +116,7 @@ export default function Loginform({ onLoginSuccess }) {
     }
 
     try {
-      const registerResponse = await axios.post('http://localhost:8080/api/users/register', payload, {
+      const registerResponse = await axios.post('http://localhost:2030/zapkart-backend/api/users/register', payload, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
@@ -139,7 +139,7 @@ export default function Loginform({ onLoginSuccess }) {
       const storedData = JSON.parse(localStorage.getItem('userData'));
       const email = storedData?.email || '';
 
-      await axios.post('http://localhost:8080/api/users/verify-otp', null, {
+      await axios.post('http://localhost:2030/zapkart-backend/api/users/verify-otp', null, {
         params: { email, otp },
       });
 
@@ -161,7 +161,7 @@ export default function Loginform({ onLoginSuccess }) {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8080/api/users/signin', loginData);
+      const response = await axios.post('http://localhost:2030/zapkart-backend/api/users/signin', loginData);
 
       localStorage.setItem('token', JSON.stringify(response.data));
       setResponseData(response.data);
@@ -177,7 +177,7 @@ export default function Loginform({ onLoginSuccess }) {
 
   const fetchUserDetails = (token) => {
     axios
-      .get('http://localhost:8080/api/users/me', {
+      .get('http://localhost:2030/zapkart-backend/api/users/me', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {

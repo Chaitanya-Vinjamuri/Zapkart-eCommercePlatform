@@ -47,7 +47,7 @@ export default function ResetPassword() {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/users/reset-password?token=${token}&newPassword=${encodeURIComponent(password)}`,
+        `http://localhost:2030/zapkart-backend/api/users/reset-password?token=${token}&newPassword=${encodeURIComponent(password)}`,
         {
           method: 'POST',
         }

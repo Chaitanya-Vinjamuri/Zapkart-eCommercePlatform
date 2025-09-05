@@ -11,7 +11,7 @@ export default function Payments() {
   const fetchPayments = async () => {
     try {
       const token = JSON.parse(localStorage.getItem('token'));
-      const response = await axios.get('http://localhost:8080/api/payments/all', {
+      const response = await axios.get('http://localhost:2030/zapkart-backend/api/payments/all', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

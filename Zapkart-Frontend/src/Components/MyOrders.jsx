@@ -27,7 +27,7 @@ export default function MyOrders() {
 
       const customerId = userData.id;
 
-      const response = await axios.get(`http://localhost:8080/api/orders/customer/${customerId}`, {
+      const response = await axios.get(`http://localhost:2030/zapkart-backend/api/orders/customer/${customerId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ export default function MyOrders() {
     try {
       const token = JSON.parse(localStorage.getItem('token'));
       const response = await axios.get(
-        `http://localhost:8080/invoice/download/razorpay/${razorpayOrderId}`,
+        `http://localhost:2030/zapkart-backend/invoice/download/razorpay/${razorpayOrderId}`,
         {
           responseType: 'blob',
           headers: {
@@ -72,7 +72,7 @@ export default function MyOrders() {
   };
 
 
-  const imageBaseUrl = "http://localhost:8080/images/";
+  const imageBaseUrl = "http://localhost:2030/zapkart-backend/images/";
 
   const calculateDynamicStatus = (orderDate) => {
     const now = new Date();
@@ -169,7 +169,7 @@ export default function MyOrders() {
                 )}
                 <button
                   className="btn btn-info btn-sm"
-                  onClick={() => window.open(`http://localhost:8080/invoice/view/razorpay/${razorpayOrderId}`, '_blank')}
+                  onClick={() => window.open(`http://localhost:2030/zapkart-backend/invoice/view/razorpay/${razorpayOrderId}`, '_blank')}
                 >
                   View Invoice
                 </button>

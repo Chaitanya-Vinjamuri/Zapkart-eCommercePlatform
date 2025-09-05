@@ -123,7 +123,7 @@ export default function SellerDashboard() {
                                     <p className="mb-0 me-2 text-white">{name}</p>
                                     {image && (
                                         <img
-                                            src={`http://localhost:8080/images/${image}`}
+                                            src={`http://localhost:2030/zapkart-backend/images/${image}`}
                                             alt="profile"
                                             style={{
                                                 width: "40px",

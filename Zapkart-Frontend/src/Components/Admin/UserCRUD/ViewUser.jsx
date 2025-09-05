@@ -11,7 +11,7 @@ export default function ViewUser() {
   const fetchUsers = async () => {
     try {
       const token = JSON.parse(localStorage.getItem('token'));
-      const response = await axios.get('http://localhost:8080/api/users/', {
+      const response = await axios.get('http://localhost:2030/zapkart-backend/api/users/', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -35,7 +35,7 @@ export default function ViewUser() {
             </div>
             <div className="w-24 h-24">
               <img
-                src={`http://localhost:8080/images/${user.profileImage}`}
+                src={`http://localhost:2030/zapkart-backend/images/${user.profileImage}`}
                 alt="Profile"
                 className="w-full h-full object-cover rounded-full"
               />

@@ -13,7 +13,7 @@ export default function SellerOrders() {
     const fetchSellerOrders = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/orders/${sellerId}`,
+          `http://localhost:2030/zapkart-backend/api/orders/${sellerId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

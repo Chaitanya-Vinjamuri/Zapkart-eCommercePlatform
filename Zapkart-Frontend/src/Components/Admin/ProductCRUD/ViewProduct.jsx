@@ -13,7 +13,7 @@ export default function ViewProduct() {
     try {
       const token = JSON.parse(localStorage.getItem('token'));
 
-      const response = await axios.get(`http://localhost:8080/api/products/${category}`, {
+      const response = await axios.get(`http://localhost:2030/zapkart-backend/api/products/${category}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -54,7 +54,7 @@ export default function ViewProduct() {
         {products.map((product) => (
           <div key={product.id} className="border rounded p-4 shadow flex flex-col items-center">
             <img 
-              src={`http://localhost:8080/images/${product.profileImage}`} 
+              src={`http://localhost:2030/zapkart-backend/images/${product.profileImage}`} 
               alt={product.name} 
               className="h-40 object-contain mb-4"
             />

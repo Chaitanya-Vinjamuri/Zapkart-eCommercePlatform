@@ -20,7 +20,7 @@ const FridgesPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/products/fridge', {
+        const response = await axios.get('http://localhost:2030/zapkart-backend/api/products/fridge', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setProducts(response.data);
@@ -58,7 +58,7 @@ const FridgesPage = () => {
     const quantity = 1;
 
     axios.post(
-      'http://localhost:8080/api/cart/add',
+      'http://localhost:2030/zapkart-backend/api/cart/add',
       { customerId, productId, quantity },
       { headers: { Authorization: `Bearer ${token}` } }
     )
@@ -123,7 +123,7 @@ const FridgesPage = () => {
                   >
                     <Card.Img
                       variant="top"
-                      src={`http://localhost:8080/images/${product.profileImage}`}
+                      src={`http://localhost:2030/zapkart-backend/images/${product.profileImage}`}
                       className="w-100 h-100 object-contain"
                       onError={(e) => {
                         e.target.onerror = null;
@@ -184,7 +184,7 @@ const FridgesPage = () => {
               <div className="col-md-6">
                 <div style={{ height: '300px', overflow: 'hidden' }}>
                   <img
-                    src={`http://localhost:8080/images/${selected?.profileImage}`}
+                    src={`http://localhost:2030/zapkart-backend/images/${selected?.profileImage}`}
                     alt={selected?.name}
                     className="w-100 h-100 object-contain"
                     onError={(e) => {

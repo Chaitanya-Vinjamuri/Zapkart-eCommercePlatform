@@ -11,7 +11,7 @@ export default function Orders() {
   const fetchOrders = async () => {
     try {
       const token = JSON.parse(localStorage.getItem('token'));
-      const response = await axios.get('http://localhost:8080/api/orders/all', {
+      const response = await axios.get('http://localhost:2030/zapkart-backend/api/orders/all', {
         headers: {
           Authorization: `Bearer ${token}`
         }
