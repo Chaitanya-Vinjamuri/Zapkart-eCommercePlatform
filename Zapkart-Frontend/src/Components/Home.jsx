@@ -8,7 +8,7 @@ import { FaStar, FaRegHeart, FaHeart } from 'react-icons/fa';
 import Footer from './Footer';
 import zapkarthorizontallogo from '/assets/zapkarthorizontallogo.png'; // Adjust path as needed
 
-
+import zapkartVideo from '/videos/Zapkart.mp4';
 
 
 // Animation variants
@@ -173,7 +173,7 @@ export default function Home() {
       >
         <Modal.Body className="p-0 bg-white">
           <video
-            src="/videos/Zapkart.mp4"
+             src={zapkartVideo}
             autoPlay
             muted
             loop

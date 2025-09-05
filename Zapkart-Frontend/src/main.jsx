@@ -9,7 +9,7 @@ import { CartProvider } from './stores/context/CartContext.jsx'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/zapkart-frontend">
     <React.StrictMode>
       <CartProvider>
         <App />
