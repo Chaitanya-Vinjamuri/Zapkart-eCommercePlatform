@@ -136,7 +136,6 @@
     </dependencies>
 
     <build>
-    <finalName>zapkart-backend</finalName>
         <plugins>
             <!-- Compiler Plugin -->
             <plugin>
