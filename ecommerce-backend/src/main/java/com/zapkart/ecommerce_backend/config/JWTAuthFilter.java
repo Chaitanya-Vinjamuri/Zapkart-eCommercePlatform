@@ -26,6 +26,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
     // Public endpoints that don't require JWT authentication
     private static final List<String> PUBLIC_PATHS = List.of(
         "/api/users/register",
+        "/api/users/sample",
         "/api/users/login",
         "/api/users/signin",
         "/api/users/verify-otp",

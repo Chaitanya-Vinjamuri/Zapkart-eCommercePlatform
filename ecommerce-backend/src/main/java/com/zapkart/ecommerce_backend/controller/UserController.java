@@ -46,6 +46,10 @@ public class UserController {
     public static String uploadDirectory=System.getProperty("user.dir")+"/src/main/resources/static/images";
     
 
+    @GetMapping("/sample")
+    public String demo() {
+    	return "hello KLuian";
+    }
 
     @PostMapping("/register")
     public ResponseEntity<User> register(@ModelAttribute User user, @RequestParam("image") MultipartFile file) throws IOException {

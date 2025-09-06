@@ -24,7 +24,7 @@ import com.zapkart.ecommerce_backend.service.EmailService;
 import com.zapkart.ecommerce_backend.service.JWTManager;
 
 @CrossOrigin(
-	    origins = "http://localhost:5173"
+	    origins = "http://localhost:2030"
 	)
 @RestController 
 @RequestMapping("/api/users")

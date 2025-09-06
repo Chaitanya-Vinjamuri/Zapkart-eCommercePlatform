@@ -37,7 +37,7 @@ public class SecurityConfig {
             .and()
             .csrf().disable()
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/users/register", "/api/users/login", "/api/users/signin","/api/users/verify-otp","/api/users/forgot-password", "/api/users/reset-password","/invoice/view/razorpay/*","/invoice/download/razorpay/*"
+                .requestMatchers("/api/users/register","/api/users/sample", "/api/users/login", "/api/users/signin","/api/users/verify-otp","/api/users/forgot-password", "/api/users/reset-password","/invoice/view/razorpay/*","/invoice/download/razorpay/*"
                 		,"/images/**"
                 		+ "").permitAll()
                
