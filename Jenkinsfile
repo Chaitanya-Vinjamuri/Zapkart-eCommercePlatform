@@ -30,7 +30,7 @@ pipeline {
         stage('Build Backend') {
             steps {
                 dir('ecommerce-backend') {
-                    bat 'mvn clean package -DskipTests'
+                    bat 'mvn clean package -DskipTests -DfinalName=zapkart-backend'
                 }
             }
         }
@@ -49,6 +49,7 @@ pipeline {
                 '''
             }
         }
+
 
     }
 
