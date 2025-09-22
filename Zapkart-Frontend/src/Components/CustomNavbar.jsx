@@ -140,7 +140,7 @@ const CustomNavbar = () => {
                 <p className="mb-0 me-2">{name}</p>
                 {image && (
                   <img
-                    src={`http://localhost:8080/images/${image}`}
+                    src={`${BASE_URL}/images/${image}`}
                     alt="profile"
                     style={{
                       width: "40px",
