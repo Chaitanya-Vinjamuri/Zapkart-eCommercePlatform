@@ -173,7 +173,7 @@ export default function Home() {
       >
         <Modal.Body className="p-0 bg-white">
           <video
-            src="/videos/Zapkart.mp4"
+            src="http://localhost:2030/zapkart-frontend/videos/Zapkart.mp4"
             autoPlay
             muted
             loop
