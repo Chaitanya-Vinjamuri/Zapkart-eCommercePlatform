@@ -18,6 +18,7 @@ import {
   FiChevronDown
 } from "react-icons/fi";
 import axios from "axios"; // ✅ added axios
+import BASE_URL from "../config";
 
 const CustomNavbar = () => {
   const location = useLocation();
@@ -139,7 +140,7 @@ const CustomNavbar = () => {
                 <p className="mb-0 me-2">{name}</p>
                 {image && (
                   <img
-                    src={`http://localhost:2030/zapkart-backend/images/${image}`}
+                    src={`http://localhost:8080/images/${image}`}
                     alt="profile"
                     style={{
                       width: "40px",
